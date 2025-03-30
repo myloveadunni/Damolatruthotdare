@@ -14,11 +14,11 @@ export default function Footer() {
           </div>
           
           <p className="text-gray-600 dark:text-gray-400 font-medium">
-            Bringing love closer, despite the distance
+            Ola and Adunni Forever
           </p>
           
           <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-            © {year} My Adunni | Made with love for a special someone
+            © {year} Ola & Adunni | Made with love by Ola
           </p>
         </div>
       </div>

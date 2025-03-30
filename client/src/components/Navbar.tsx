@@ -10,9 +10,10 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center group">
           <span className="text-2xl md:text-3xl font-romantic text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text group-hover:opacity-90 transition-opacity duration-300">
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">M</span>
-            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">y</span>
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300"> </span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">O</span>
+            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">l</span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">a</span>
+            <span className="inline-block"> & </span>
             <span className="inline-block transform group-hover:rotate-6 transition-transform duration-300">A</span>
             <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">d</span>
             <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">u</span>
@@ -21,8 +22,9 @@ export default function Navbar() {
             <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">i</span>
           </span>
           
-          <span className="ml-2 mt-1">
-            <FaHeart className="text-pink-400 dark:text-pink-500 animate-beat" size={18} />
+          <span className="ml-2 mt-1 flex">
+            <FaHeart className="text-blue-500 animate-beat" size={16} />
+            <FaHeart className="text-pink-500 animate-beat" style={{ animationDelay: '0.3s' }} size={16} />
           </span>
         </Link>
         
