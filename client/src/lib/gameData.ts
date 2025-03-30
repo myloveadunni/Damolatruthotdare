@@ -1,5 +1,6 @@
 // Truth or Dare Game Data
 export const truthQuestions = [
+  // Original truths
   "What nickname would you love me to call you?",
   "What does 'home' feel like to you?",
   "Have you ever laughed so hard you cried?",
@@ -24,10 +25,38 @@ export const truthQuestions = [
   "What do you find most attractive about me?",
   "Do you remember our first ever conversation?",
   "What's something sweet I've done that you'll never forget?",
-  "If you could teleport to me right now, what's the first thing you'd do?"
+  "If you could teleport to me right now, what's the first thing you'd do?",
+
+  // Romantic truths
+  "What's a memory with me that still makes your heart skip? (Be honest 💖)",
+  "What's a memory with me that still makes your heart skip? — even if it's cheesy 😅",
+  "When did you realize you were in love with me? — even if it's cheesy 😅",
+  "If we could go anywhere right now, just the two of us, where would it be? — just from your heart 💌",
+  "What do you love most about me? — even if it's cheesy 😅",
+  "What's one dream you have for our future? with all your feelings 😘",
+  "What's a memory with me that still makes your heart skip?",
+  "What nickname do you secretly love being called by me? with all your feelings 😘",
+  "If we were cuddling right now, what would you whisper to me?, no holding back 😍",
+  "What's one dream you have for our future? and explain why 🥺",
+  "What's a romantic thing you've imagined us doing together? ❤️",
+  "What's one moment with me you replay in your mind? — even if it's cheesy 😅",
+  "What's something small I do that makes you smile? — even if it's cheesy 😅",
+  "What's a romantic thing you've imagined us doing together? (Be honest 💖)",
+  "What's one moment with me you replay in your mind? — just from your heart 💌",
+  "What's something small I do that makes you smile? — just from your heart 💌",
+  "What do you love most about me? — just from your heart 💌",
+  "If we were cuddling right now, what would you whisper to me? and explain why 🥺",
+  "What's something small I do that makes you smile?",
+  "When did you realize you were in love with me? with all your feelings 😘",
+  "What's a memory with me that still makes your heart skip? and explain why 🥺",
+  "What nickname do you secretly love being called by me? (Be honest 💖)",
+  "When did you realize you were in love with me?",
+  "What's one dream you have for our future? — just from your heart 💌",
+  "If we were cuddling right now, what would you whisper to me?"
 ];
 
 export const darePrompts = [
+  // Original dares
   "Text me the weirdest emoji combo you can think of.",
   "Draw a heart using just emojis and send it.",
   "Send me your favorite picture of us (or a cute GIF if you don't have one).",
@@ -52,7 +81,29 @@ export const darePrompts = [
   "Text me something that would make me blush.",
   "Type a love letter using only 10 words.",
   "Tell me something you've wanted to say but felt shy.",
-  "Record yourself saying 'I love you' in a funny accent."
+  "Record yourself saying 'I love you' in a funny accent.",
+
+  // Romantic dares
+  "Describe how you'd cuddle me if we were together right now.",
+  "Flirt with me using only 3 words.",
+  "Describe your dream night with me using only emojis.",
+  "Record yourself saying how much you love me in a dramatic way.",
+  "Describe in detail how you would kiss me if I were with you right now.",
+  "Type out a steamy one-liner you'd whisper in my ear.",
+  "Send me a voice note saying something that will make me blush.",
+  "Text me a flirty message you've never sent before.",
+  "Send me a made-up flirty nickname and explain why you chose it.",
+  "Pretend we're on a date right now — describe what's happening.",
+  "Send me your favorite picture or GIF that reminds you of me.",
+  "Write me a mini love letter right now.",
+  "Tell me one romantic thing you've imagined us doing together.",
+  "Say something spicy but end it with 'just kidding... unless?' 😈",
+  "Send me a voice note saying something romantic.",
+  "Tell me something you've wanted to say to me late at night 😏",
+  "Type out your ideal date night with me from start to finish.",
+  "Send me a kiss emoji combo that matches your mood 😘🔥",
+  "Rename my contact to something romantic and show me.",
+  "If I dared you to seduce me with words right now, what would you say?"
 ];
 
 // Build-a-Date Game Data
