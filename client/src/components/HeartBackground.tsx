@@ -23,11 +23,21 @@ export default function HeartBackground() {
   }, []);
 
   const createFloatingHearts = () => {
-    const heartColors = ['#FF6B9C', '#9D4EDD', '#F9A8D4'];
-    const heartSizes = [20, 30, 40];
+    const heartColors = [
+      '#FF6B9C', // pink
+      '#FF85A1', // light pink
+      '#F9A8D4', // softer pink
+      '#9D4EDD', // purple
+      '#C77DFF', // light purple
+      '#FEC5E5', // pastel pink
+      '#FF5F9E', // vibrant pink
+    ];
+    
+    const heartSizes = [15, 20, 25, 30, 35];
     const newHearts: FloatingHeart[] = [];
     
-    for (let i = 0; i < 15; i++) {
+    // Increase number of hearts for more romantic effect
+    for (let i = 0; i < 25; i++) {
       const size = heartSizes[Math.floor(Math.random() * heartSizes.length)];
       const color = heartColors[Math.floor(Math.random() * heartColors.length)];
       
@@ -36,8 +46,8 @@ export default function HeartBackground() {
         left: `${Math.random() * 100}%`,
         size,
         color,
-        delay: `${Math.random() * 10}s`,
-        duration: `${6 + Math.random() * 10}s`
+        delay: `${Math.random() * 15}s`, // Longer range for more natural appearance
+        duration: `${10 + Math.random() * 15}s` // Longer duration for a more gentle float
       });
     }
     
@@ -56,12 +66,17 @@ export default function HeartBackground() {
             animationDuration: heart.duration,
             animationDelay: heart.delay,
             animationTimingFunction: 'ease-in-out',
-            animationIterationCount: 'infinite'
+            animationIterationCount: 'infinite',
+            filter: 'drop-shadow(0 0 2px rgba(255, 182, 193, 0.3))'
           }}
         >
           <FaHeart
             size={heart.size}
             color={heart.color}
+            style={{ 
+              opacity: Math.random() * 0.4 + 0.6, // Varied opacity for depth effect
+              transform: `rotate(${Math.random() * 40 - 20}deg)` // Random slight rotation
+            }}
           />
         </div>
       ))}
@@ -69,19 +84,30 @@ export default function HeartBackground() {
       <style>{`
         @keyframes float {
           0% {
-            transform: translateY(0) rotate(0deg);
+            transform: translateY(110vh) rotate(0deg) scale(0.8);
             opacity: 0;
           }
           10% {
-            opacity: 1;
+            opacity: 0.8;
+            transform: translateY(90vh) rotate(45deg) scale(1);
+          }
+          50% {
+            transform: translateY(50vh) rotate(180deg) scale(0.9);
           }
           90% {
-            opacity: 1;
+            opacity: 0.6;
+            transform: translateY(10vh) rotate(315deg) scale(1);
           }
           100% {
-            transform: translateY(-100vh) rotate(360deg);
+            transform: translateY(-10vh) rotate(360deg) scale(0.8);
             opacity: 0;
           }
+        }
+        
+        /* Add a subtle pulsing effect to the hearts */
+        @keyframes heartbeat {
+          0%, 100% { transform: scale(1); }
+          50% { transform: scale(1.1); }
         }
       `}</style>
     </div>

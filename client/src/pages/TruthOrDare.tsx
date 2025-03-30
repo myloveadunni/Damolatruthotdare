@@ -48,11 +48,13 @@ export default function TruthOrDare() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-pacifico text-primary dark:text-accent mb-2">Truth or Dare</h2>
-        <p className="text-gray-600 dark:text-gray-300">Spin the wheel and see what fate has in store for you!</p>
-        <div className="mt-4 bg-pink-50 dark:bg-gray-700 rounded-lg p-4 max-w-lg mx-auto text-gray-700 dark:text-gray-300 text-sm">
-          <p className="font-medium">💞 Long-Distance Tips:</p>
+      <div className="text-center mb-8 relative">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-heart-pattern pointer-events-none"></div>
+        <h2 className="text-4xl font-romantic text-primary dark:text-accent mb-3 text-gradient">Truth or Dare</h2>
+        <p className="text-gray-600 dark:text-gray-300 text-lg">Spin the wheel of love and open your heart to each other!</p>
+        
+        <div className="mt-5 bg-white bg-opacity-80 dark:bg-gray-800 dark:bg-opacity-80 rounded-2xl p-5 max-w-lg mx-auto text-gray-700 dark:text-gray-300 text-sm border border-pink-200 dark:border-gray-700 shadow-romantic">
+          <p className="font-medium text-lg mb-2 font-romantic">💞 Long-Distance Tips:</p>
           <ul className="list-disc pl-5 mt-2 text-left">
             <li>Take screenshots of your results to share with your partner</li>
             <li>Play together while on a video call for extra fun</li>
@@ -61,7 +63,9 @@ export default function TruthOrDare() {
         </div>
       </div>
       
-      <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
+      <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-romantic p-8 mb-8 border border-pink-100 dark:border-gray-700 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full opacity-5 bg-heart-pattern pointer-events-none"></div>
+        
         <div className="relative mb-8">
           {/* Spinner Wheel */}
           <div 
@@ -70,29 +74,29 @@ export default function TruthOrDare() {
             style={{ transform: `rotate(${rotation}deg)` }}
           >
             {/* Truth Section */}
-            <div className="absolute w-1/2 h-1/2 bg-secondary [clip-path:polygon(0_0,100%_0,50%_100%)] [transform-origin:bottom_right] rotate-0"></div>
+            <div className="absolute w-1/2 h-1/2 bg-gradient-to-br from-purple-400 to-purple-600 [clip-path:polygon(0_0,100%_0,50%_100%)] [transform-origin:bottom_right] rotate-0 shadow-lg"></div>
             
             {/* Dare Section */}
-            <div className="absolute w-1/2 h-1/2 bg-primary [clip-path:polygon(0_0,100%_0,50%_100%)] [transform-origin:bottom_right] rotate-180deg"></div>
+            <div className="absolute w-1/2 h-1/2 bg-gradient-to-br from-pink-400 to-rose-600 [clip-path:polygon(0_0,100%_0,50%_100%)] [transform-origin:bottom_right] rotate-180deg shadow-lg"></div>
             
             {/* Center */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[50px] h-[50px] bg-white rounded-full z-10 shadow-md flex items-center justify-center">
-              <FaSync className="text-primary" />
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[60px] h-[60px] bg-white rounded-full z-10 shadow-lg flex items-center justify-center border-2 border-pink-200">
+              <FaSync className="text-pink-500 text-xl" />
             </div>
             
             {/* Pointer */}
-            <div className="absolute top-1/2 right-[-20px] transform -translate-y-1/2 w-0 h-0 border-l-[30px] border-l-accent border-y-[15px] border-y-transparent z-5"></div>
+            <div className="absolute top-1/2 right-[-25px] transform -translate-y-1/2 w-0 h-0 border-l-[35px] border-l-pink-500 border-y-[20px] border-y-transparent z-5 filter drop-shadow"></div>
           </div>
           
-          <div className="mt-4 text-center">
-            <div className="flex justify-center gap-6 mb-4">
+          <div className="mt-6 text-center">
+            <div className="flex justify-center gap-8 mb-4">
               <div className="flex items-center">
-                <div className="w-4 h-4 rounded-full bg-secondary mr-2"></div>
-                <span className="text-gray-700 dark:text-gray-300">Truth</span>
+                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 mr-2 shadow-sm"></div>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">Truth 💬</span>
               </div>
               <div className="flex items-center">
-                <div className="w-4 h-4 rounded-full bg-primary mr-2"></div>
-                <span className="text-gray-700 dark:text-gray-300">Dare</span>
+                <div className="w-5 h-5 rounded-full bg-gradient-to-br from-pink-400 to-rose-600 mr-2 shadow-sm"></div>
+                <span className="text-gray-700 dark:text-gray-300 font-medium">Dare 😈</span>
               </div>
             </div>
           </div>
@@ -101,14 +105,14 @@ export default function TruthOrDare() {
         <button 
           onClick={handleSpin}
           disabled={isSpinning}
-          className="w-full py-3 px-6 bg-primary hover:bg-opacity-90 text-white rounded-full font-medium transition-all duration-300 shadow-md hover:shadow-lg disabled:opacity-50"
+          className="w-full py-3 px-6 bg-gradient-to-r from-pink-500 to-purple-500 hover:opacity-90 text-white rounded-full font-medium transition-all duration-300 shadow-romantic hover:shadow-lg disabled:opacity-50 font-romantic text-lg"
         >
-          {isSpinning ? "Spinning..." : "Spin the Wheel"}
+          {isSpinning ? "Spinning..." : "Spin the Wheel of Love"}
         </button>
       </div>
       
       <div className="text-center">
-        <Link href="/" className="py-2 px-6 text-primary dark:text-accent hover:underline inline-flex items-center">
+        <Link href="/" className="py-2 px-6 text-pink-500 dark:text-pink-300 hover:underline inline-flex items-center font-medium">
           <FaArrowLeft className="mr-2" /> Back to Games
         </Link>
       </div>
