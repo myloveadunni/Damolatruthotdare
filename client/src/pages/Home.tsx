@@ -12,7 +12,7 @@ export default function Home() {
           <FaHeart className="text-pink-300 dark:text-pink-500 text-3xl mx-auto" />
         </div>
         
-        <h2 className="text-5xl md:text-6xl font-romantic text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text mb-6">Welcome, Lovebirds!</h2>
+        <h2 className="text-5xl md:text-6xl font-romantic text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text mb-6">Hello, My Adunni!</h2>
         
         <p className="text-gray-600 dark:text-gray-300 max-w-lg mx-auto text-xl leading-relaxed">
           Across the miles, our hearts remain connected. 
@@ -65,7 +65,7 @@ export default function Home() {
       <div className="mt-16 text-center">
         <div className="inline-flex items-center px-6 py-2 rounded-full bg-white dark:bg-gray-800 shadow-romantic border border-pink-100 dark:border-gray-700">
           <FaHeart className="text-pink-400 mr-2" />
-          <p className="text-pink-500 dark:text-pink-300 font-romantic text-xl">Created with love for long-distance couples</p>
+          <p className="text-pink-500 dark:text-pink-300 font-romantic text-xl">Created with love for my Adunni</p>
           <FaHeart className="text-pink-400 ml-2" />
         </div>
       </div>

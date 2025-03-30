@@ -10,15 +10,15 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center group">
           <span className="text-2xl md:text-3xl font-romantic text-transparent bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text group-hover:opacity-90 transition-opacity duration-300">
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">L</span>
-            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">o</span>
-            <span className="inline-block transform group-hover:rotate-6 transition-transform duration-300">v</span>
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">e</span>
-            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">G</span>
-            <span className="inline-block transform group-hover:rotate-6 transition-transform duration-300">a</span>
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">m</span>
-            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">e</span>
-            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">s</span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">M</span>
+            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">y</span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300"> </span>
+            <span className="inline-block transform group-hover:rotate-6 transition-transform duration-300">A</span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">d</span>
+            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">u</span>
+            <span className="inline-block transform group-hover:rotate-6 transition-transform duration-300">n</span>
+            <span className="inline-block transform group-hover:scale-110 transition-transform duration-300">n</span>
+            <span className="inline-block transform group-hover:rotate-3 transition-transform duration-300">i</span>
           </span>
           
           <span className="ml-2 mt-1">

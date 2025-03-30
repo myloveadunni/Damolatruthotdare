@@ -18,7 +18,7 @@ export default function Footer() {
           </p>
           
           <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
-            © {year} LoveGames | Made with love for long-distance couples
+            © {year} My Adunni | Made with love for a special someone
           </p>
         </div>
       </div>

@@ -77,4 +77,8 @@
   .animate-float-fast {
     animation: float 8s ease-in-out infinite;
   }
+  
+  .spin-wheel {
+    transition: transform 0.05s linear;
+  }
 }

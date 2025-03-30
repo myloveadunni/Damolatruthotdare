@@ -13,37 +13,87 @@ export default function TruthOrDare() {
   const [rotation, setRotation] = useState(0);
   const spinnerRef = useRef<HTMLDivElement>(null);
 
+  // Function to get a more realistic physical spin with slowing effect
+  const getSpinAnimation = () => {
+    // Initial speed (high)
+    let initialSpeed = 30 + Math.random() * 20; // Between 30-50 degrees per frame
+    const frames = [];
+    let currentRotation = 0;
+    
+    // Generate 120 frames of spinning animation with slowing down effect
+    for (let i = 0; i < 120; i++) {
+      // Calculate slowdown factor that increases over time (easeOut)
+      // This creates a realistic physical slowdown effect
+      const slowdown = 1 - Math.pow(i / 120, 2);
+      
+      // Apply slowdown to speed
+      const frameSpeed = initialSpeed * slowdown;
+      
+      // Add rotation for this frame
+      currentRotation += frameSpeed;
+      
+      // Store the calculated rotation for this frame
+      frames.push(currentRotation);
+    }
+    
+    // Ensure we rotate at least 3 full spins (1080 degrees) to make it exciting
+    const minRotation = 1080;
+    if (frames[frames.length - 1] < minRotation) {
+      const extraNeeded = minRotation - frames[frames.length - 1];
+      for (let i = 0; i < frames.length; i++) {
+        frames[i] += extraNeeded;
+      }
+    }
+    
+    return frames;
+  };
+
   const handleSpin = () => {
     if (isSpinning) return;
     
     setIsSpinning(true);
     spinSound.play();
     
-    // Random rotation between 720 and 1440 degrees + offset to ensure it lands on a section
-    const degrees = 720 + Math.floor(Math.random() * 720);
-    setRotation(degrees);
+    // Generate realistic spinning animation
+    const spinFrames = getSpinAnimation();
+    const finalDegrees = spinFrames[spinFrames.length - 1];
     
-    setTimeout(() => {
-      setIsSpinning(false);
-      
-      // Determine if it landed on Truth or Dare based on final rotation
-      const finalRotation = degrees % 360;
-      const isTruth = (finalRotation >= 0 && finalRotation < 180);
-      
-      successSound.play();
-      
-      if (isTruth) {
-        const randomTruth = truthQuestions[Math.floor(Math.random() * truthQuestions.length)];
-        setResultType("Truth 💬");
-        setResultText(randomTruth);
+    // Start animation loop
+    let frameIndex = 0;
+    const animateFrame = () => {
+      if (frameIndex < spinFrames.length) {
+        setRotation(spinFrames[frameIndex]);
+        frameIndex++;
+        requestAnimationFrame(animateFrame);
       } else {
-        const randomDare = darePrompts[Math.floor(Math.random() * darePrompts.length)];
-        setResultType("Dare 😈");
-        setResultText(randomDare);
+        // Animation complete
+        onSpinComplete(finalDegrees);
       }
-      
-      setShowModal(true);
-    }, 4000);
+    };
+    
+    // Kick off the animation
+    requestAnimationFrame(animateFrame);
+  };
+  
+  const onSpinComplete = (finalDegrees: number) => {
+    // Determine if it landed on Truth or Dare based on final rotation
+    const finalRotation = finalDegrees % 360;
+    const isTruth = (finalRotation >= 0 && finalRotation < 180);
+    
+    successSound.play();
+    
+    if (isTruth) {
+      const randomTruth = truthQuestions[Math.floor(Math.random() * truthQuestions.length)];
+      setResultType("Truth 💬");
+      setResultText(randomTruth);
+    } else {
+      const randomDare = darePrompts[Math.floor(Math.random() * darePrompts.length)];
+      setResultType("Dare 😈");
+      setResultText(randomDare);
+    }
+    
+    setIsSpinning(false);
+    setShowModal(true);
   };
 
   return (
@@ -70,7 +120,7 @@ export default function TruthOrDare() {
           {/* Spinner Wheel */}
           <div 
             ref={spinnerRef}
-            className="relative w-[300px] h-[300px] rounded-full mx-auto transition-transform duration-[4s] ease-[cubic-bezier(0.17,0.67,0.83,0.67)]"
+            className="relative w-[300px] h-[300px] rounded-full mx-auto spin-wheel"
             style={{ transform: `rotate(${rotation}deg)` }}
           >
             {/* Truth Section */}
