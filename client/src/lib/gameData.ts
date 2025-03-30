@@ -1,47 +1,47 @@
 // Truth or Dare Game Data
 export const truthQuestions = [
   "What was your first impression of me?",
-  "What's your favorite physical feature about me?",
-  "When did you know you were falling for me?",
-  "What's one thing you'd like to change about our relationship?",
-  "What has been your favorite date with me so far?",
-  "What's something you've been afraid to tell me?",
-  "What's the most embarrassing thing you've done in front of me?",
-  "What's your favorite memory of us together?",
-  "If you could relive one moment with me, what would it be?",
-  "What's something you want to try together that we haven't yet?"
+  "What's your favorite thing about my personality?",
+  "When did you know our long-distance relationship would work?",
+  "What's one thing that's gotten easier about being long distance?",
+  "What has been your favorite virtual date with me so far?",
+  "What's something you look forward to when we're together in person?",
+  "What do you miss most when we're apart?",
+  "What's your favorite photo of us together?",
+  "What moment are you most looking forward to in our future?",
+  "What creative date idea would you like to try together virtually?"
 ];
 
 export const darePrompts = [
-  "Give me a 30-second shoulder massage.",
-  "Do your best impression of me.",
+  "Do your best impression of me over video call.",
   "Let me post anything I want on your social media.",
   "Show me the last five photos in your camera roll.",
-  "Let me style your hair however I want.",
-  "Send a sweet text to your mom/dad about me.",
-  "Call a friend and tell them how much you love me while on speakerphone.",
-  "Do 10 push-ups with me sitting on your back.",
-  "Let me feed you something with my eyes closed.",
-  "Dance to a song of my choosing without music."
+  "Take a screenshot of this result and set it as your phone background.",
+  "Send a sweet text to your mom/dad about me and share a screenshot.",
+  "Call a friend on speakerphone and tell them how much you love me.",
+  "Do a dramatic reading of the last text message you sent me.",
+  "Take a funny selfie right now and send it to me.",
+  "Write me a short poem in 60 seconds and read it aloud.",
+  "Dance to a song of my choosing on our next video call."
 ];
 
 // Build-a-Date Game Data
 export const dateLocations = [
-  "beach", "rooftop restaurant", "cozy cabin", "Paris", "local park", 
-  "home", "drive-in movie", "spa", "art gallery", "botanical garden"
+  "virtual beach day", "simultaneous rooftop dining", "virtual cozy cabin scene", "Paris (in our dreams)", "local parks in our respective cities", 
+  "home (connected via video call)", "virtual movie night", "DIY spa at home", "virtual art gallery tour", "your favorite spot in your city"
 ];
 
 export const dateFoods = [
-  "pizza", "sushi", "chocolate fondue", "homemade pasta", "jollof rice", 
-  "ice cream sundaes", "tapas", "your favorite takeout", "wine and cheese", "BBQ"
+  "pizza ordered to both homes", "homemade sushi (cooking together)", "chocolate treats", "homemade pasta (same recipe)", "a recipe from each other's culture", 
+  "ice cream (eating together on call)", "snack platters we both prepare", "the same takeout in our different cities", "wine and cheese tasting", "breakfast for dinner"
 ];
 
 export const dateOutfits = [
-  "cozy hoodies", "fancy dress code", "pajamas", "something blue", "coordinated outfits", 
-  "vintage clothes", "comfy casual", "sporty attire", "themed costumes", "elegant evening wear"
+  "cozy matching hoodies", "fancy dress-up for video date", "favorite pajamas", "something in the same color", "coordinated outfits we plan together", 
+  "accessories from each other's gifts", "comfy casual with a special touch", "showing off our favorite outfits", "themed dress-up (you decide the theme)", "elegant tops (fancy on top, comfy on bottom)"
 ];
 
 export const dateActivities = [
-  "stargazing", "dance lessons", "karaoke night", "watching the sunset", "board game competition", 
-  "painting together", "couples massage", "cooking a new recipe", "making a scrapbook", "surprise adventure"
+  "virtual stargazing", "taking online dance lessons together", "virtual karaoke night", "watching the sunset on video call", "online board game competition", 
+  "painting the same picture on video call", "giving each other instructions for self-massage", "cooking the same recipe together", "creating digital photo albums", "planning our next in-person surprise"
 ];

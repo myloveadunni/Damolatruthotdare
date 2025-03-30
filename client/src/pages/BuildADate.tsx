@@ -29,6 +29,14 @@ export default function BuildADate() {
       <div className="text-center mb-8">
         <h2 className="text-3xl font-pacifico text-secondary dark:text-accent mb-2">Build-a-Date</h2>
         <p className="text-gray-600 dark:text-gray-300">Create your perfect date with a click!</p>
+        <div className="mt-4 bg-pink-50 dark:bg-gray-700 rounded-lg p-4 max-w-lg mx-auto text-gray-700 dark:text-gray-300 text-sm">
+          <p className="font-medium">🌟 Long-Distance Date Ideas:</p>
+          <ul className="list-disc pl-5 mt-2 text-left">
+            <li>Virtual version: Recreate the date on a video call (e.g., cook the same meal)</li>
+            <li>Plan for your next meetup or save ideas for future in-person dates</li>
+            <li>Have your partner build a date too, then compare ideas!</li>
+          </ul>
+        </div>
       </div>
       
       <div className="max-w-md mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 mb-8">
@@ -54,10 +62,8 @@ export default function BuildADate() {
       </div>
       
       <div className="text-center">
-        <Link href="/">
-          <a className="py-2 px-6 text-secondary dark:text-accent hover:underline inline-flex items-center">
-            <FaArrowLeft className="mr-2" /> Back to Games
-          </a>
+        <Link href="/" className="py-2 px-6 text-secondary dark:text-accent hover:underline inline-flex items-center">
+          <FaArrowLeft className="mr-2" /> Back to Games
         </Link>
       </div>
     </div>

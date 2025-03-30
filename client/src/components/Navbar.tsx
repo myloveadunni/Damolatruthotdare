@@ -8,10 +8,8 @@ export default function Navbar() {
   return (
     <nav className="bg-white dark:bg-gray-800 shadow-md py-4 sticky top-0 z-50 transition-colors duration-300">
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link href="/">
-          <a className="text-2xl md:text-3xl font-pacifico text-primary dark:text-accent">
+        <Link href="/" className="text-2xl md:text-3xl font-pacifico text-primary dark:text-accent">
             Couple's Game Night
-          </a>
         </Link>
         
         <button 
